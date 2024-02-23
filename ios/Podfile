@@ -1,0 +1,23 @@
+platform :ios, '13.0'
+
+source 'https://cdn.cocoapods.org/'
+source 'https://github.com/Mapsted/podspec-simulator.git' #Simulator - Xcode 15.0
+
+
+def capacitor_pods
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'Capacitor', :path => '../node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../node_modules/@capacitor/ios'
+  pod 'mapsted-sdk-map-ui', '~> 5.0'
+end
+
+target 'Plugin' do
+  capacitor_pods
+  # Add your Pods here
+end
+
+target 'PluginTests' do
+  capacitor_pods
+  # Add your Pods here
+end
