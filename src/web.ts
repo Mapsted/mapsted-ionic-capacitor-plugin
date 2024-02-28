@@ -3,10 +3,6 @@ import { WebPlugin } from '@capacitor/core';
 import type { MapstedPlugin } from './definitions';
 
 export class MapstedWeb extends WebPlugin implements MapstedPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
-  }
   async launchMapActivity(): Promise<void> {
     // Implement your logic for launching MapstedMapActivity on the web platform.
     console.log('launchMapActivity called on the web platform');
