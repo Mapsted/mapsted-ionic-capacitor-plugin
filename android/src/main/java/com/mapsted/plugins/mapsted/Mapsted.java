@@ -19,11 +19,6 @@ import com.mapsted.ui.map.MapstedMapActivity;
 
 public class Mapsted {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
-    }
-
     public void launchMapActivity(Context context) {
         try {
             Intent intent = new Intent(context, MapstedMapActivity.class);

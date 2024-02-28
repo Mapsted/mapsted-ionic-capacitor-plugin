@@ -43,14 +43,7 @@ public class MapstedPlugin extends Plugin {
     private Mapsted implementation = new Mapsted();
     private static final String TAG = "MapstedPlugin";
 
-    @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
-    }
     @PluginMethod
     public void launchMapActivity(PluginCall call) {
         try {

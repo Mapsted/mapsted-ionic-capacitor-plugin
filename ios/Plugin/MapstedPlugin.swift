@@ -9,13 +9,7 @@ import Capacitor
 public class MapstedPlugin: CAPPlugin {
     private let implementation = Mapsted()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
-        @objc func launchMapActivity(_ call: CAPPluginCall) {
+    @objc func launchMapActivity(_ call: CAPPluginCall) {
         do {
             guard let bridge = bridge else {
                 throw NSError(domain: "Mapsted", code: 500, userInfo: ["message": "Bridge not available"])
